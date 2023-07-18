@@ -10,9 +10,4 @@
     <ProjectReference Include="..\Casgem.DataAccessLayer\Casgem.DataAccessLayer.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Concrete\" />
-    <Folder Include="Abstract\" />
-  </ItemGroup>
-
 </Project>
