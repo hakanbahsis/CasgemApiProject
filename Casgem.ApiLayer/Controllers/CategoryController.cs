@@ -30,7 +30,7 @@ namespace Casgem.ApiLayer.Controllers
             return Ok();
         }
 
-        [HttpGet("deleteCategory")]
+        [HttpGet("deleteCategory/{id}")]
         public IActionResult DeleteCategory(int id)
         {
             var values=_categoryService.GetById(id);
@@ -45,7 +45,7 @@ namespace Casgem.ApiLayer.Controllers
             return Ok();
         }
 
-        [HttpGet("{id}")]
+        [HttpGet("getCategory/{id}")]
         public IActionResult GetCategory(int id)
         {
             var values= _categoryService.GetById(id);

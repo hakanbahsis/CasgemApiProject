@@ -3,8 +3,15 @@ using Casgem.BusinessLayer.Concrete;
 using Casgem.DataAccessLayer.Abstract;
 using Casgem.DataAccessLayer.Concrete.Context;
 using Casgem.DataAccessLayer.Concrete.EntityFramework;
+using System.Text.Json.Serialization;
+using System.Text.Json;
 
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddControllersWithViews()
+    .AddNewtonsoftJson(options => 
+    options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore);
+
 
 // Add services to the container.
 
