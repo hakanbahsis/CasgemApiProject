@@ -37,7 +37,7 @@ namespace Casgem.ApiLayer.Controllers
             return Ok(values);
         }
 
-        [HttpDelete("deleteCustomer")]
+        [HttpDelete("deleteCustomer/{id}")]
         public IActionResult DeleteCustomer(int id)
         {
             var values = _customerService.GetById(id);
